@@ -1,0 +1,271 @@
+* {
+  margin: 5px;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: #5d6af0;
+  font-weight: bold;
+  background-color: #000000;
+  font-family: 'Libre Franklin';
+  font-size: 22px;
+}
+
+h1 {
+  font-size: 60px;
+}
+
+.block {
+  position: relative;
+  margin: 10% auto 0;
+  width: 70%;
+  height: 200px;
+  background: linear-gradient(0deg, black, rgb(44,43,43));
+  border-radius: 20px;
+  padding: 10px;
+  text-align: center;
+}
+
+.glow::before, .glow::after {
+  content: '';
+  position: absolute;
+  left: -2px;
+  top: -2px;
+  background: linear-gradient(90deg, #5d6af0, #6B31F7, #7F2FED);
+  background-size: 400%;
+  width: calc(100% + 5px);
+  height: calc(100% + 5px);
+  z-index: -1;
+  animation: border 20s linear infinite;
+  border-radius: 20px;
+}
+
+@keyframes border {
+  0%, 100% {
+    background-position: 0 0;
+  }
+  50%{
+    background-position: 300% 0;
+  }
+}
+
+.glow::after{
+  filter: blur(20px);
+}
+
+.block2 {
+  position: relative;
+  margin: 10% auto 0;
+  width: 10%;
+  height: 50px;
+  background: linear-gradient(0deg, black, rgb(44,43,43));
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.glow2::before, .glow2::after {
+  content: '';
+  position: absolute;
+  left: -2px;
+  top: -2px;
+  background: linear-gradient(90deg, #5d6af0, #6B31F7, #7F2FED);
+  background-size: 400%;
+  width: calc(100% + 5px);
+  height: calc(100% + 5px);
+  z-index: -1;
+  animation: border 20s linear infinite;
+  border-radius: 10px;
+}
+
+@keyframes border {
+  0%, 100% {
+    background-position: 0 0;
+  }
+  50%{
+    background-position: 300% 0;
+  }
+}
+
+.glow2::after{
+  filter: blur(20px);
+}
+
+.top {
+  font-size: 36px;
+  font-weight: bold;
+  color: #5d6af0;
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 15px;
+  background-color: #254E73;
+  font-family: sans-serif;
+  width: 100%;
+}
+
+li {
+  list-style: none;
+}
+
+.experience {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background: #254E73;
+  border-radius: 15px;
+  color: #5d6af0;
+  justify-content: center;
+  padding: 5px;
+}
+
+.description {
+  border: 1px solid #000;
+  width: 300px;
+  height: 300px;
+}
+
+.contact {
+  text-align: center;
+  background-color: #254E73;
+  color: #5d6af0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 10px;
+  border-radius: 20px;
+  width: 100%;
+}
+.contact li {
+  list-style: none;
+  display: inline-block;
+  padding: 10px 50px 50px 10px;
+  margin-top: 10px;
+}
+.contact a {
+  color: #5d6af0;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 10px;
+  margin-top: 10px;
+  border: 2px solid #89CFF0;
+  border-radius: 5px;
+}
+.contact a:hover {
+  color: #254e73;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 10px;
+  border: 2px solid #89CFF0;
+  border-radius: 5px;
+  background-color: #89CFF0;
+}
+
+.button {
+  color: #FFF;
+  background-color: #254E73;
+  font-weight: bold;
+  padding: 20px;
+  text-align: center;
+}
+
+
+@media only screen and (max-width: 900px) {
+  .experiences {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+    flex-wrap: wrap;
+
+  }
+
+  .experience {
+    width: 33%;
+    display: flex;
+    justify-content: center;
+    background: #254E73;
+    border-radius: 15px;
+    color: #5d6af0;
+    justify-content: center;
+    padding: 5px;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+  }
+
+  .description {
+    border: 1px solid #000;
+    width: 300px;
+    height: 300px;
+  }
+}
+
+.experiences {
+  display: flex;
+  justify-content: space-between;
+}
+/*  background-color: #00d2be;*/
+
+/*
+body {
+  color: #254e73;
+  background-color: #000000;
+  font-family: sans-serif;
+}
+
+
+
+
+ul {
+  list-style-type: disc;
+}
+
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #9f00ff;
+}
+
+nav li {
+  float: left;
+}
+
+nav li a {
+  display: block;
+  color: #00D2BE;
+  text-align: center;
+  padding: 15px 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav li a:hover:not(.active) {
+  background-color: #c0c0c0;
+  color: #254e73;
+  padding: 15px 40px 15px 40px;
+}
+
+.active {
+  background-color: #04AA6D;
+}
+
+
+div {
+  padding: 10px;
+}
+
+
+*/
+/*
+med blue 5995DA
+light blue 89CFF0
+Dark Blue 254E73
+Silver C0C0C0
+Green 00D2BE
+*/
